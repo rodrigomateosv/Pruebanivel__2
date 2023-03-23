@@ -1,0 +1,25 @@
+@startuml
+class Punto {
+  - x: float
+  - y: float
+  + __init__(x: float, y: float)
+  + __str__(): str
+  + cuadrante(): int
+  + vector(punto: Punto): None
+  + distancia(punto: Punto): float
+}
+
+class Rectangulo {
+  - p1: Punto
+  - p2: Punto
+  + __init__(p1: Punto, p2: Punto)
+  + base(): float
+  + altura(): float
+  + area(): float
+}
+
+Punto --> Rectangulo : "p1, p2"
+
+Rectangulo --> Punto : "p1, p2"
+
+@enduml
